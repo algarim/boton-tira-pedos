@@ -1,4 +1,4 @@
-sonidosPedos = ['complaining-fart.mp3', 'fart.mp3', 'fart-lol.mps', 'perfect-fart.mp3', 'wet-fart.mp3'];
+sonidosPedos = ['complaining-fart.mp3', 'fart.mp3', 'fart-lol.mp3', 'perfect-fart.mp3', 'wet-fart.mp3'];
 
 reacciones = ['Rico', 'Qué olorcito', 'Uf, amigo', '¿Te hiciste caca?', 'Jugoso']
 
