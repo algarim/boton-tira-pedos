@@ -1,40 +1,26 @@
 sonidosPedos = ['complaining-fart.mp3', 'fart.mp3', 'fart-lol.mps', 'perfect-fart.mp3', 'wet-fart.mp3'];
 
+reacciones = ['Rico', 'Qué olorcito', 'Uf, amigo', '¿Te hiciste caca?', 'Jugoso']
+
 // Función para agarrar un pedo al azar
 let pedoSeleccionado;
 
 function elegirPedo () {
-    let indiceAleatorio = Math.floor (Math.random()*4);
+    let indiceAleatorio = Math.floor (Math.random()*5);
     pedoSeleccionado = sonidosPedos[indiceAleatorio];
 }
 
-elegirPedo();
+// Función para elegir reacción al azar
+let reaccionSeleccionada;
 
-// Create a custom toast with an image
-function createCustomToastWithImage(urlImagen) {
-    const toast = document.createElement('div');
-    toast.classList.add('toast');
-  
-    const image = document.createElement('img');
-    image.src = './assets/img/'+ urlImagen;
-    image.classList.add('toast-image');
-  
-    const message = document.createElement('span');
-    message.textContent = 'Rico pedo, amigo';
-  
-    toast.appendChild(image);
-    toast.appendChild(message);
-  
-    // Use Toastify-js to display the custom toast
-    Toastify({
-      text: toast.outerHTML,
-      duration: 3000,
-      newWindow: true,
-      close: true,
-      gravity: 'bottom',
-      position: 'center',
-    }).showToast();
-  }
+function elegirReaccion () {
+    let indiceAleatorio = Math.floor (Math.random()*5);
+    reaccionSeleccionada = reacciones[indiceAleatorio];
+}
+
+// Elijo pedo y reacción inicial
+elegirPedo();
+elegirReaccion();
 
 // Boton que reproduce sonido del pedo
 botonPedos = document.getElementById('fart-button');
@@ -43,9 +29,22 @@ botonPedos.onclick = () => {
     let audio = new Audio ('./assets/farts/' + pedoSeleccionado);
     audio.play();
 
-    createCustomToastWithImage();
+    Toastify({
+        text: reaccionSeleccionada,
+        duration: 3000,
+        gravity: "bottom",
+        position: "center",
+        style: {
+          background: "linear-gradient(to right, #FFBD6D, #A55B1D)",
+        },
+        offset: {
+            y: 50
+          },
+      }).showToast();
 
     elegirPedo();
+    elegirReaccion();
+
 }
 
 
