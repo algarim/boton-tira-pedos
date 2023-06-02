@@ -1,6 +1,7 @@
 body {
     background-image: url("https://www.health.com/thmb/Cx38Kdq5yxCzJUsPek9DyGf8-Po=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fart-be4042e7b9284a3fac5b8325774ecd40.jpg");
     background-size: cover;
+    background-position: center
 }
 
 .center-screen {
