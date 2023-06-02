@@ -1,0 +1,28 @@
+body {
+    background-image: url("https://www.health.com/thmb/Cx38Kdq5yxCzJUsPek9DyGf8-Po=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fart-be4042e7b9284a3fac5b8325774ecd40.jpg");
+    background-size: cover;
+}
+
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
+#fart-button {
+    background-color: rgb(253, 220, 201);
+    opacity: 0.8;
+}
+
+#fart-button:hover {
+    background-color: rgb(104, 70, 19);
+    color: beige;
+}
+
+#fart-button h1 {
+    font-size: 35px;
+    font-weight: normal;
+}
